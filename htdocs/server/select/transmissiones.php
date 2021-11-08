@@ -2,7 +2,7 @@
 select_tranmission();
 function select_tranmission()
 {
-   include "../server/conn.php";
+   include "./conn/conn.php";
    try {
       $conn =
       new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

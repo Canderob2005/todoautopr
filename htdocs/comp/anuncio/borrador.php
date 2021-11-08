@@ -204,7 +204,7 @@
                   <option selected="" value="">
                     Seleccione la transmisión
                   </option>
-                  <?php include './server/transmissiones.php';?>
+                  <?php include './server/select/transmissiones.php';?>
                 </select>
               </div>
             </div>
