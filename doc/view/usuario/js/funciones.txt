@@ -1,0 +1,169 @@
+
+
+descripcion * descripcion 
+
+direccion 
+
+email * correo
+
+full_lablel * full_lablel
+
+idanuncio 
+
+idcategoria  * categoria
+
+idclasificacion * clasificacion
+
+idcondicion * condicion
+
+idmarca  * marca
+
+idmodelo  * modelo
+
+idpueblo  * pueblo
+
+idtransmission  * transmision
+
+imagen 
+
+licencia  * licencia
+
+mejoroferta * statusprecio
+
+millage  * millaje
+
+multas * multas
+
+nombre * nombre
+
+pagado  * pagado
+
+precio * precio
+
+telefono  * telefono
+
+year 	* year
+
+
+=======================================================
+
+
+descripcion_imagen 
+idanuncio 
+idimagen 
+nombre_directorio 
+ruta_imagen
+
+
+
+
+
+
+				console.log(campo_vacio);
+
+				// // -----------------------
+				// console.log(nombre.value); // definido
+				// // -----------------------
+
+				// console.log(pueblo.value); // definido
+
+				console.log(fun_radio_button_value(pagado));
+
+				// console.log(year.value); // definido
+
+				// // --------------------------
+				// console.log(telefono.value); // definido
+
+				// console.log(correo.value);
+
+				// console.log(categoria.value); // definido
+
+				// console.log(marca.value); // definido
+
+				// console.log(modelo.value); // definido
+
+				// console.log(clasificacion.value); // definido
+
+				// console.log(condicion.value); // definido
+
+				// console.log(transmision.value); // definido
+
+				console.log(fun_radio_button_value(licencia)); // definido
+
+				console.log(fun_radio_button_value(full_lablel)); //definido
+
+				console.log(fun_radio_button_value(multas)); //definido
+
+				// console.log(millaje.value); // definido
+
+				// console.log(precio.value); // definido
+
+				console.log(fun_radio_button_value(statusprecio)); //definido
+
+				// console.log(descripcion.value); // definido
+
+
+				// console.log(valida_campo_vacio(nombre));
+				// console.log(valida_campo_vacio(pueblo));
+				// console.log(valida_campo_vacio(telefono));
+				// console.log(valida_campo_vacio(categoria));
+				// console.log(valida_campo_vacio_marca(marca)); // false
+				// console.log(valida_campo_vacio(modelo));
+				// console.log(valida_campo_vacio(year));
+				// console.log(valida_campo_vacio(clasificacion));
+				// console.log(valida_campo_vacio(condicion));
+				// console.log(valida_campo_vacio(transmision));
+				// console.log(valida_campo_vacio(descripcion));
+				// console.log(valida_campo_vacio(millaje));
+				// console.log(valida_campo_vacio(precio));
+				// console.log("PAGADO" + test_radio_vacio(pagado));
+				// console.log(test_radio_vacio(licencia));
+				// console.log(test_radio_vacio(full_lablel));
+				// console.log(test_radio_vacio(multas));
+				// console.log(test_radio_vacio(statusprecio));
+				// console.log();
+				// console.log();
+
+
+								console.log(campo_vacio);
+
+				// -----------------------
+				console.log(nombre.value); // definido
+				// -----------------------
+
+				console.log(pueblo.value); // definido
+
+				console.log(fun_radio_button_value(pagado));
+
+				console.log(year.value); // definido
+
+				// --------------------------
+				console.log(telefono.value); // definido
+
+				console.log(correo.value);
+
+				console.log(categoria.value); // definido
+
+				console.log(marca.value); // definido
+
+				console.log(modelo.value); // definido
+
+				console.log(clasificacion.value); // definido
+
+				console.log(condicion.value); // definido
+
+				console.log(transmision.value); // definido
+
+				console.log(fun_radio_button_value(licencia)); // definido
+
+				console.log(fun_radio_button_value(full_lablel)); //definido
+
+				console.log(fun_radio_button_value(multas)); //definido
+
+				console.log(millaje.value); // definido
+
+				console.log(precio.value); // definido
+
+				console.log(fun_radio_button_value(statusprecio)); //definido
+
+				console.log(descripcion.value); // definido

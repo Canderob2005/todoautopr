@@ -1,0 +1,27 @@
+sudo /opt/lampp/lampp start
+
+=============================================================
+http://localhost/Proyecto/todoautopr_/htdocs/
+http://clasificadostodoautoflorida.com
+=============================================================
+
+
+https://github.com/codefunc+ode/todoautopr_
+
+
+==============================================
+http://todoautopr.epizy.com
+http://pruebas.todoautopr.com/
+==============================================
+ns1.dns-parking.com
+ns2.dns-parking.com
+
+include $_SERVER['REQUEST_URI'] . "/configuracion/config.php";
+
+Instrucciones 
+
+php_flag display_startup_errors on
+php_flag display_errors on
+
+Options -Indexes
+ErrorDocument 403 /notas.txt

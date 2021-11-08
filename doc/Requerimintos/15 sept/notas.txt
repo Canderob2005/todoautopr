@@ -1,0 +1,24 @@
+Marca:
+Modelo:
+Año del vehículo:
+Millaje:
+Precio:
+Precio final: O Mejor oferta:  
+Clasificación del vehículo:
+Descripción del vehículo: 
+Condición vehículo:
+Tipo de transmisión: 
+Registro a mi nombre:
+Tiene multas:
+Full labels:
+Nombre contacto:
+Teléfono de contacto:
+E-mail de contacto:
+Pueblo:
+
+
+///////////////////////////////////////////////////////////////////////////
+Robert Candelario: Hacer el formulario para añadir Marca y modelo solamente.
+
+Robert Candelario: Aparte a poder editar las marcas y modelos. Osea si escriben algún dato erróneo de las marcas o modelos, poderlo editar. Aparte a editar los anuncios.
+///////////////////////////////////////////////////////////////////////////

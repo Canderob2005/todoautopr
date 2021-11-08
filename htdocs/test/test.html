@@ -1,0 +1,46 @@
+<div class="w3-col s12 m4 l3 targeta">
+   <div class="w3-container w3-center">
+      <div class="w3-card-4">
+         <h3 class="">
+            <?=$marca;?>
+         </h3>
+         <img class="w3-round" src="<?=$ruta;?>"/>
+         <ul class="w3-ul w3-small w3-left-align">
+            <li>
+               Marca:
+               <span class="marca">
+                  <?=$marca;?>
+               </span>
+            </li>
+            <li>
+               Modelo
+               <span>
+                  <?=$modelo;?>
+               </span>
+            </li>
+            <li>
+               Transmisión
+               <span>
+                  <?=$transmission;?>
+               </span>
+            </li>
+            <li>
+               Clasificación
+               <span>
+                  <?=$clasificacion;?>
+               </span>
+            </li>
+            <li>
+               Condición
+               <span>
+                  <?=$condicion;?>
+               </span>
+            </li>
+         </ul>
+         <form action="../server/detalles_anuncio/detalles.php" method="get">
+            <input name="idanuncio" type="hidden" value="<?=$idanuncio;?>"/>
+            <input class="w3-btn w3-block w3-green" type="submit" value="Ver detalles"/>
+         </form>
+      </div>
+   </div>
+</div>

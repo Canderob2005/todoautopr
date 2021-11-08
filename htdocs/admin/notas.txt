@@ -1,0 +1,9 @@
+localhost/Proyecto/Robert-Candelario/APP-pruebas/htdocs/admin/admin.php
+
+SELECT * from limitoffsetDemo limit 7,4;
+
+
+Referencia rutas 
+htdocs/view/admin/notas.txt
+
+/htdocs/view/admin/view/notas.txt

@@ -1,0 +1,442 @@
+https://mariadb.com/kb/en/last_insert_id/
+
+https://www.php.net/manual/en/function.mkdir.php
+
+https://www.php.net/manual/en/features.file-upload.php
+
+https://www.php.net/manual/en/reserved.variables.files.php
+
+https://www.php.net/manual/en/function.unlink.php
+
+https://www.php.net/manual/en/class.pdostatement.php
+
+https://www.php.net/manual/en/pdostatement.fetch.php
+
+https://www.php.net/manual/en/pdo.lastinsertid.php
+
+https://www.php.net/manual/en/pdo.prepare.php
+
+
+algoritmo 
+
+capurar los datos con post y file 
+
+Insertar anuncio 
+
+Validar que se inserto
+
+capturar le id de la insercion 
+
+crear un directorio basado en le id recupoerado
+
+guardar nombre de dorectorio en variable 
+
+recuperar imagenes 
+
+agregar nuevo nombre a las imagenes 
+
+generar descriopcion de imagen por modelo y marca. 
+
+guardar imagenes en el directorio generado 
+
+enviar mensaje de exito o de falla al usuario. 
+
+
+// var_dump($_POST);
+// var_dump($_FILES);
+// echo $_POST['nombre'];
+
+// Desired directory structure
+// chmod("../img", 0755);
+$nombre_directorio = '../img/DIRECTORIO';
+
+// To create the nested structure, the $recursive parameter
+// to mkdir() must be specified.
+
+// if (!mkdir($nombre_directorio, 0777, true)) {
+//    die('Failed to create directories...');
+// }
+
+// rmdir($nombre_directorio);
+
+if (isset($_POST) && isset($_FILES["imagenes"]["tmp_name"])) {
+
+// anuncio($servername, $username, $password, $dbname);
+   $respuesta = array(
+      "respuesta"    => "exito",
+      "camtidad_img" => count(
+         $_FILES["imagenes"]["tmp_name"]
+      ),
+   );
+   // var_dump($_FILES);
+   // echo json_encode($respuesta);
+
+   //  Determina si el anuncio es de pago o gratuito
+   if (count($_FILES['imagenes']["tmp_name"]) <= 2) {
+      echo "Anuncio gratuito";
+   } elseif (count($_FILES['imagenes']["tmp_name"]) >= 2) {
+      echo "Anuncio de pago";
+   }
+
+} else {
+
+   $respuesta = array("respuesta" => "error");
+
+   echo json_encode($respuesta);
+}
+
+// anuncio($servername, $username, $password, $dbname);
+// muestra_datos($servername, $username, $password, $dbname);
+
+
+array(18) {
+  ["nombre"]=>
+  string(13) "Carlos Aleman"
+  ["pagado"]=>
+  string(2) "si"
+  ["pueblo"]=>
+  string(2) "71"
+  ["year"]=>
+  string(4) "2000"
+  ["telefono"]=>
+  string(10) "9392777333"
+  ["correo"]=>
+  string(21) "caleman9791@gmail.com"
+  ["categoria"]=>
+  string(1) "2"
+  ["marca"]=>
+  string(1) "1"
+  ["modelo"]=>
+  string(1) "2"
+  ["clasificacion"]=>
+  string(1) "1"
+  ["condicion"]=>
+  string(1) "4"
+  ["transmision"]=>
+  string(1) "1"
+  ["licencia"]=>
+  string(2) "si"
+  ["full_lablel"]=>
+  string(2) "si"
+  ["multas"]=>
+  string(2) "no"
+  ["millaje"]=>
+  string(5) "10000"
+  ["precio"]=>
+  string(4) "2000"
+  ["statusprecio"]=>
+  string(2) "si"
+}
+
+
+===========================================================================================
+
+
+// echo ' <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> ';
+// Estas dos variables contienen todo lo relacionado al formdata,
+// se necesita condicional para agregar indice uno como principal
+// y ademas tomar decisión de pagado o no para la cantidad de imágenes a insertar
+
+//  Inserta un nuevo anuncio
+// var_dump($_POST);
+
+// echo $_POST['nombre'];
+// echo "\n";
+// echo $_POST['pagado'];
+// echo "\n";
+// echo $_POST['pueblo'];
+// echo "\n";
+// echo $_POST['year'];
+// echo "\n";
+// echo $_POST['telefono'];
+// echo "\n";
+// echo $_POST['correo'];
+// echo "\n";
+// echo $_POST['categoria'];
+// echo "\n";
+// echo $_POST['marca'];
+// echo "\n";
+// echo $_POST['modelo'];
+// echo "\n";
+// echo $_POST['clasificacion'];
+// echo "\n";
+// echo $_POST['condicion'];
+// echo "\n";
+// echo $_POST['transmision'];
+// echo "\n";
+// echo $_POST['licencia'];
+// echo "\n";
+// echo $_POST['full_lablel'];
+// echo "\n";
+// echo $_POST['multas'];
+// echo "\n";
+// echo $_POST['millaje'];
+// echo "\n";
+// echo $_POST['precio'];
+// echo "\n";
+// echo $_POST['statusprecio'];
+// echo "\n";
+// echo $_POST['descripcion'];
+// echo "\n";
+
+
+
+===============================================================================================
+
+//  Muestra todos los datos de los anuncios
+function muestra_datos($servername, $username, $password, $dbname)
+{
+   echo ' <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> ';
+   try {
+      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $stmt = $conn->prepare("SELECT * FROM anuncio");
+      $stmt->execute();
+      echo '<div class="w3-responsive" style="width: 100%; padding: 50px;">';
+      // set the resulting array to associative
+      // $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+      echo '<table class="w3-table-all">';
+      echo '<thead>';
+      echo '<tr>';
+      echo '<th>nombre</th>';
+      echo '<th>pagado</th>';
+
+      echo '<th>idpueblo</th>';
+      echo '<th>telefono</th>';
+      echo '<th>email</th>';
+      echo '<th>idcategoria</th>';
+      echo '<th>idmarca</th>';
+      echo '<th>idmodelo</th>';
+      echo '<th>idclasificacion</th>';
+      echo '<th>idcondicion</th>';
+      echo '<th>idtransmission</th>';
+      echo '<th>licencia</th>';
+      echo '<th>full_lablel</th>';
+      echo '<th>multas</th>';
+      echo '<th>millage</th>';
+      echo '<th>precio</th>';
+      echo '<th>mejoroferta</th>';
+      echo '<th>descripcion</th>';
+      echo '<th>year</th>';
+
+      echo '</tr>';
+
+      echo '</thead>';
+      echo '<tbody>';
+      $count = 0;
+      while ($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
+         // $id = $data['idmarca'];
+
+         $nombre = $data['nombre'];
+         $pagado = $data['pagado'];
+
+         $idpueblo        = $data['idpueblo'];
+         $telefono        = $data['telefono'];
+         $email           = $data['email'];
+         $idcategoria     = $data['idcategoria'];
+         $idmarca         = $data['idmarca'];
+         $idmodelo        = $data['idmodelo'];
+         $idclasificacion = $data['idclasificacion'];
+         $idcondicion     = $data['idcondicion'];
+         $idtransmission  = $data['idtransmission'];
+         $licencia        = $data['licencia'];
+         $full_lablel     = $data['full_lablel'];
+         $multas          = $data['multas'];
+         $millage         = $data['millage'];
+         $precio          = $data['precio'];
+         $mejoroferta     = $data['mejoroferta'];
+         $descripcion     = $data['descripcion'];
+         $year            = $data['year'];
+
+         echo '<tr>';
+         echo "<td> $nombre</td>";
+         echo "<td> $pagado</td>";
+
+         echo "<td> $idpueblo</td>";
+         echo "<td> $telefono</td>";
+         echo "<td> $email</td>";
+         echo "<td> $idcategoria</td>";
+         echo "<td> $idmarca</td>";
+         echo "<td> $idmodelo</td>";
+         echo "<td> $idclasificacion</td>";
+         echo "<td> $idcondicion</td>";
+         echo "<td> $idtransmission</td>";
+         echo "<td> $licencia</td>";
+         echo "<td> $full_lablel</td>";
+         echo "<td> $multas</td>";
+         echo "<td> $millage</td>";
+         echo "<td> $precio</td>";
+         echo "<td> $mejoroferta</td>";
+         echo "<td> $descripcion</td>";
+         echo "<td> $year</td>";
+         echo '</tr>';
+
+         $count = $count + 1;
+         // echo "<option value=" . '"' . $id . '"' . ">";
+         // echo $data['nombre'];
+         // echo '</option>';
+
+      }
+      echo '</tbody>';
+      echo ' </table>';
+      echo '</div>';
+   } catch (PDOException $e) {
+      echo "Error: " . $e->getMessage();
+   }
+   $conn = null;
+
+}
+
+
+
+
+anuncio.descripcion,
+
+anuncio.direccion,
+
+anuncio.email,
+
+anuncio.full_lablel,
+
+anuncio.idanuncio,
+
+anuncio.idcategoria,
+
+anuncio.idclasificacion,
+
+anuncio.idcondicion,
+
+anuncio.idmarca,
+
+anuncio.idmodelo,
+
+anuncio.idpueblo,
+
+anuncio.idtransmission,
+
+anuncio.imagen,
+
+anuncio.licencia,
+
+anuncio.mejoroferta,
+
+anuncio.millage,
+
+anuncio.multas,
+
+anuncio.nombre,
+
+anuncio.pagado,
+
+anuncio.precio, 
+
+anuncio.telefono,
+
+anuncio.year
+
+      $stmt = $conn->prepare(
+         "SELECT
+         anuncio.descripcion,
+         anuncio.direccion,
+         anuncio.email,
+         anuncio.full_lablel,
+         anuncio.idanuncio,
+         categoria.nombre AS nombre_categoria,
+         clasificacion.nombre AS nombre_clasificacion,
+         condicion.nombre AS nombre_condicion,
+         marca.nombre AS nombre_marca,
+         modelo.nombre AS nombre_modelo,
+         pueblo.nombre AS nombre_pueblo,
+         transmission.nombre AS nombre_trasmission,
+         anuncio.imagen,
+         anuncio.licencia,
+         anuncio.mejoroferta,
+         anuncio.millage,
+         anuncio.multas,
+         anuncio.nombre,
+         anuncio.pagado,
+         anuncio.precio,
+         anuncio.telefono,
+         anuncio.year
+         FROM
+         anuncio,
+         marca,
+         modelo,
+         categoria,
+         clasificacion,
+         condicion,
+         pueblo,
+         transmission
+         WHERE anuncio.idmarca=:idmarca
+         AND anuncio.idmodelo=:idmodelo
+         AND anuncio.idcategoria=categoria.idcategoria
+         AND anuncio.idclasificacion=clasificacion.idclasificacion
+         AND anuncio.idcondicion=condicion.idcondicion
+         AND anuncio.idtransmission=transmission.idtransmission
+         AND anuncio.idpueblo=pueblo.idpueblo"
+      );
+
+
+     categoria.nombre AS nombre_categoria,
+         clasificacion.nombre AS nombre_clasificacion,
+         condicion.nombre AS nombre_condicion,
+         marca.nombre AS nombre_marca,
+         modelo.nombre AS nombre_modelo,
+         pueblo.nombre AS nombre_pueblo,
+         transmission.nombre AS nombre_trasmission,
+
+
+
+             console.log('-----------------------');
+                console.log('anuncio # ' + (indice + 1));
+                console.log('=======================');
+                // console.log("xxxxxxx"+element);
+                console.log("idanuncio = " +
+                    element['idanuncio']);
+                console.log("nombre = " + element['nombre']);
+                console.log("pagado = " + element['pagado']);
+                console.log("direccion = " + element['direccion']);
+                console.log("telefono = " + element['telefono']);
+                console.log("email = " + element['email']);
+                console.log("idcategoria = " + element['nombre_categoria']);
+                console.log("idmarca = " + element['nombre_marca']);
+                console.log("idmodelo = " + element['nombre_modelo']);
+                console.log("year = " + element['year']);
+                console.log("idclasificacion = " + element['nombre_clasificacion']);
+                console.log("idcondicion = " + element['nombre_condicion']);
+                console.log("idtransmission = " + element['nombre_trasmission']);
+                console.log("licencia= = " + element['licencia']);
+                console.log("multas = " + element['multas']);
+                console.log("millage = " + element['millage']);
+                console.log("descripcion = " + element['descripcion']);
+                console.log("imagen = " + element['imagen']);
+                console.log("full_lablel = " + element['full_lablel']);
+                console.log("idpueblo = " + element['nombre_pueblo']);
+                console.log("precio = " + element['precio']);
+                console.log("mejoroferta = " + element['mejoroferta']);
+
+
+
+
+anuncio.idanuncio
+anuncio.nombre
+anuncio.pagado
+anuncio.direccion
+anuncio.telefono
+anuncio.email
+anuncio.idcategoria
+anuncio.idmarca
+anuncio.idmodelo
+anuncio.year
+anuncio.idclasificacion
+anuncio.idcondicion
+anuncio.idtransmission
+anuncio.licencia
+anuncio.multas
+anuncio.millage
+anuncio.descripcion`
+anuncio.imagen
+anuncio.full_lablel
+anuncio.idpueblo
+anuncio.precio
+anuncio.mejoroferta

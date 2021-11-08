@@ -1,0 +1,3 @@
+localhost/Proyecto/Robert-Candelario/APP-pruebas/htdocs/admin/admin.php
+
+SELECT * from limitoffsetDemo limit 7,4;

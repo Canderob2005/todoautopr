@@ -1,0 +1,7 @@
+.filtrosbtn select,
+.filtrosbtn [type="number"] {
+    width: 300px !important;
+}
+/*.filtrosbtn .form-check-inline {
+    width: 100% !important;
+}*/
