@@ -157,7 +157,7 @@
               </label>
               <br/>
               <!--   <input aria-describedby="year" class="form-control w3-input" id="year" name="year" required="" type="text"/> -->
-              <?php include "../server/select/ano.php";?>
+              <?php include "./server/select/ano.php";?>
             </div>
           </div>
           <div class="w3-row">
@@ -190,7 +190,7 @@
                   <option selected="" value="">
                     Selecciona la Condición
                   </option>
-                  <?php include '../server/condicion.php';?>
+                  <?php include './server/condicion.php';?>
                 </select>
               </div>
             </div>
@@ -204,7 +204,7 @@
                   <option selected="" value="">
                     Seleccione la transmisión
                   </option>
-                  <?php include '../server/transmissiones.php';?>
+                  <?php include './server/transmissiones.php';?>
                 </select>
               </div>
             </div>
