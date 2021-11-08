@@ -1,4 +1,6 @@
 <?php
+
+//  Deberia trabajarse una conexión global y no escribir estos datos en todos los ficheros
 // ---------------------------------------
 // //////////////////////////////////////
 //  Conexión servidor local
