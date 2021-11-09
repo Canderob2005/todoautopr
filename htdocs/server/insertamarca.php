@@ -1,45 +1,53 @@
 <?php
-include '../conn/conn.php';
 
+// Debería trabajarse con mas calma. La intención es consultar si existe la marca y no insertarla y de no existir insertarla y si hubo error no insertar, si se inserto notificar y si existe notificar. Se debe verificar que el javascript reciba las respuestas correctas y que las trabaje correctamente.
 if (isset($_POST["fun"]) && $_POST['fun'] == "marcaNoesiste") {
 
-   marcaNoesiste($servername, $username, $password, $dbname);
+   // echo "entro";
+   marcaNoesiste();
 
+} else {
+   echo "no entro";
 }
 
-function marcaNoesiste($servername, $username, $password, $dbname)
+function marcaNoesiste()
 {
+   include '../conn/conn.php';
    try {
       $conn =
       new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
       $conn->setAttribute(
          PDO::ATTR_ERRMODE,
          PDO::ERRMODE_EXCEPTION);
+
       $marca = $_POST["marca"];
       $sql   = "SELECT * FROM marca WHERE nombre = :nombre";
       // =================================================================
 
-      // TRabajar con las consultas multiples
+      // Trabajar con las consultas múltiples
 
       $stmt = $conn->prepare($sql);
       $stmt->bindParam(":nombre", $marca, PDO::PARAM_STR);
 
-      /* Create a second PDOStatement object */
-      $sql2 = "INSERT INTO marca (nombre)
-                VALUES (:nombre)";
+      $sql2 = "INSERT INTO marca (nombre) VALUES (:nombre)";
+
       $stmt2 = $conn->prepare($sql2);
       $stmt2->bindParam(":nombre", $marca, PDO::PARAM_STR);
 
       if ($stmt->execute()) {
 
-         if ($resultado = $stmt->fetchColumn() > 0) {
+         $count = $stmt->rowCount();
+
+         if ($count > 0) {
 
             $result = array(
                "respuesta" => "no",
             );
-            echo json_encode($result);
-         } else {
 
+            echo json_encode($result);
+
+         } else {
+            $stmt->closeCursor();
             $stmt2->execute();
 
             $idmarca = $stmt2->fetch(PDO::FETCH_ASSOC);
@@ -52,6 +60,7 @@ function marcaNoesiste($servername, $username, $password, $dbname)
             echo json_encode($result);
          }
       } else {
+
          $result = array(
             "respuesta" => "nada",
          );

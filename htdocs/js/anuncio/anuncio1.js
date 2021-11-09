@@ -49,7 +49,7 @@ function trabajoConAnuncio(argument) {
 			);
 		for (var i = 0; i < pagado.length; i++) {
 			pagado[i].addEventListener("click", function() {
-				console.log("El valor de img_cantidad es :" + img_cantidad);
+				// console.log("El valor de img_cantidad es :" + img_cantidad);
 
 				//  Selecciona  de todas las cajas contenedoras de imágenes 
 				let img_caja_contenedor = document.querySelectorAll(".img_caja_contenedor");
@@ -60,7 +60,7 @@ function trabajoConAnuncio(argument) {
 					img_cantidad = 4;
 
 					mensaje = "Anuncios pagados pueden publicar " + img_cantidad + " imágenes";
-
+					console.log("El valor de img_cantidad es :" + img_cantidad);
 					for (var i = 0; i < img_caja_contenedor.length; i++) {
 						img_caja_contenedor[i].style.display = "block";
 					}
@@ -261,6 +261,7 @@ function trabajoConAnuncio(argument) {
 				let marca = agrega_marca.value;
 
 				console.log(agrega_marca);
+				console.log(agrega_marca.value);
 				console.log(img_check);
 
 				function vacio(text) {
@@ -298,11 +299,11 @@ function trabajoConAnuncio(argument) {
 
 					// console.log('Llenos');
 					let datos = {
-						fun: 'insertaMarca',
+						fun: 'marcaNoesiste',
 						marca: marca,
 
 					}
-
+					console.log(datos);
 					$.post('./server/insertamarca.php', datos,
 						function(data, textStatus, xhr) {
 
@@ -1152,7 +1153,7 @@ function trabajoConAnuncio(argument) {
 			let datos = data;
 
 			$.ajax({
-				url: '../server/anuncio.php',
+				url: './server/anuncio/anuncio.php',
 				type: 'POST',
 				data: datos,
 				contentType: false,
