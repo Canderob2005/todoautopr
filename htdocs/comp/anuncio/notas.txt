@@ -1,3 +1,15 @@
-l1 - l12 	Responsive sizes for large screens 	
-m1 - m12 	Responsive sizes for medium screens 	
-s1 - s12 	Responsive sizes for small screens
+Definición de directorios
+
+
+body =>  Incluye todos los componentes que estarán en el cuerpo de la página 
+
+footer =>  Incluye todos los componentes ubicados en el pie de página
+
+modal =>  incluye todos los componentes modales de la página
+
+head =>  Cabecera de la de página donde se ubican las etiquetas pertinentes a la sección
+
+form =>  Formularios  que se usaran en la página.
+
+
+Nota Borrador funcionado no se elimina hasta que todas las pruebas terminen
