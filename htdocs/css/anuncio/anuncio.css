@@ -1,0 +1,133 @@
+input, select, textarea {
+    /*border: 1px solid black !important;*/
+}
+
+input[type=text], select {
+    /*height: 35px !important;*/
+    margin-bottom: 20px !important;
+}
+
+.micolor {
+    background-color: yellow;
+}
+
+textarea {
+    margin-bottom: 30px;
+    height: 400px;
+}
+
+/*.agregar_una_marca,
+.agregar_un_modelo {
+    width: 100% !important;
+    height: 20px !important;
+    background-color: blue !important;
+}*/
+
+input[type=radio] {}
+
+/*.swal-content__input {
+    text-transform: capitalize !important;
+}*/
+
+.btnprecio {
+    width: 100%;
+}
+
+.display_inine {
+    display: inline;
+    width: 5%;
+}
+
+#agrega_modelo {
+    /*width: 50%;*/
+}
+
+.my_input {
+    padding: 10px;
+    /*display: block;*/
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 75%;
+    margin-right: 25PX;
+}
+
+.alerta_marca_existe {
+    width: 70% !important;
+    margin: auto;
+}
+
+@media (max-width: 800px) {
+    .padding_none {
+        padding-left: 0px;
+        padding-right: 0PX;
+    }
+    .my_input {
+        padding: 8px;
+        /*display: block;*/
+        border: none;
+        border-bottom: 1px solid #ccc;
+        width: 85%;
+        margin-right: 5PX;
+    }
+    .alerta_marca_existe {
+        width: 100% !important;
+        margin: auto;
+    }
+}
+
+.modal_half {
+    margin-top: 20PX;
+}
+
+.footer_modal {
+    padding-top: 20px !important;
+    /*width: 50%;*/
+    /*margin: auto !important;*/
+}
+
+span.modal_close {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/*.modal_close {
+    border-radius: 50px !important;
+}
+*/
+
+.bordes_seciones {
+    margin-top: 5px !important;
+    padding: 5px 0px 5px 0px;
+}
+
+/* boostrap */
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: 0.125rem;
+}
+
+.form-check-inline {
+    display: inline-block;
+    margin-right: 1rem;
+}
