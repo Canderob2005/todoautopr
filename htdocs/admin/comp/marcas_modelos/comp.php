@@ -1,3 +1,3 @@
 <?php
 
-include "tabla_matca.php";
+include "tabla_marcas.php";
