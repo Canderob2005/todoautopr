@@ -2,8 +2,8 @@
 
 function get_anuncio($id = '')
 {
-   // include "../../../../conn/conn.php";
-   include "../../../conn/conn.php";
+   // include "../../conn/conn.php";
+   include "../conn/conn.php";
 
    try {
       $conn =

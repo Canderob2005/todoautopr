@@ -1,7 +1,7 @@
 <?php
 
 // /home/code/Escritorio/Proyecto/todoautopr/htdocs/view/admin/server/marcas_modelos/get_marcas.php
-function select_marcas()
+function get_modelos()
 {
 
    include "../conn/conn.php";
@@ -14,8 +14,18 @@ function select_marcas()
          PDO::ERRMODE_EXCEPTION);
 
       $stmt = $conn->prepare(
-         "SELECT * FROM marca
+         "SELECT * FROM modelo
             ORDER BY nombre ASC"
+      );
+
+      $stmt = $conn->prepare(
+         "SELECT
+					marca.nombre as nombre_marca,
+					modelo.nombre as nombre_modelo,
+					modelo.idcategoria
+
+					FROM modelo
+					INNER JOIN marca ON modelo.idmarca=marca.idmarca"
       );
       $stmt->execute();
 
@@ -25,7 +35,11 @@ function select_marcas()
 
    } catch (PDOException $e) {
 
-      // echo "Error: " . $e->getMessage();
+      // echo "Error:" . $e->getMessage();
    }
    $conn = null;
 }
+
+// SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+// FROM Orders
+// INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;

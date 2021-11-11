@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-   <?php include "../comp/admin/head/head.php";?>
+   <?php include "./comp/admin/head/head.php";?>
    <body class="w3-light-grey">
-      <?php include '../comp/nav/nav.php';?>
+      <?php include './comp/nav/nav.php';?>
       <!-- Overlay effect when opening sidebar on small screens -->
       <!-- ========================================= -->
       <div class="w3-overlay w3-hide-large w3-animate-opacity" id="myOverlay" onclick="w3_close()" style="cursor:pointer" title="close side menu">
@@ -17,11 +17,11 @@
                </b>
             </h5>
          </header>
-         <?php include '../comp/admin/vista_previa/comp.php';?>
-         <?php include '../comp/anuncios/comp.php';?>
+         <?php include './comp/admin/vista_previa/comp.php';?>
+         <?php include './comp/anuncios/comp.php';?>
       </div>
-      <?php include "../comp/admin/javaScript/pie_pagina.php";?>
-      <script src="../js/admin/tabla_anuncio.js" type="text/javascript">
+      <?php include "./comp/admin/javaScript/pie_pagina.php";?>
+      <script src="./js/admin/tabla_anuncio.js" type="text/javascript">
       </script>
    </body>
 </html>

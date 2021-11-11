@@ -4,7 +4,7 @@
 function get_anuncios()
 {
 
-   include "../../../conn/conn.php";
+   include "../conn/conn.php";
 
    // ../conn/conn.php
 

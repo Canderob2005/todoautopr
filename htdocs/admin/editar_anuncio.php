@@ -9,9 +9,9 @@ tendrá los valores correspondientes
  -->
 <!DOCTYPE html>
 <html>
-   <?php include "../comp/admin/head/head.php";?>
+   <?php include "./comp/admin/head/head.php";?>
    <body class="w3-light-grey">
-      <?php include '../comp/nav/nav.php';?>
+      <?php include './comp/nav/nav.php';?>
       <!-- Overlay effect when opening sidebar on small screens -->
       <!-- ========================================= -->
       <div class="w3-overlay w3-hide-large w3-animate-opacity" id="myOverlay" onclick="w3_close()" style="cursor:pointer" title="close side menu">
@@ -27,9 +27,9 @@ tendrá los valores correspondientes
             </h5>
          </header>
          <!--  Componente con todo lo necesario para la acción  -->
-         <?php include '../comp/editar_anuncio/comp.php';?>
+         <?php include './comp/editar_anuncio/comp.php';?>
       </div>
-          <?php include "../comp/admin/javaScript/pie_pagina.php";?>
-      <?php include "../comp/editar_anuncio/javaScript.php";?>
+          <?php include "./comp/admin/javaScript/pie_pagina.php";?>
+      <?php include "./comp/editar_anuncio/javaScript.php";?>
    </body>
 </html>
