@@ -92,7 +92,7 @@
                </i>
                xxxxxxxx
             </a> -->
-            <a class="w3-bar-item w3-button w3-padding" href="../../../index.php">
+            <a class="w3-bar-item w3-button w3-padding" href="../index.php">
                <i class="fa fa-cog fa-fw">
                </i>
                Vita de usuarios
@@ -109,17 +109,17 @@
             <a class="w3-bar-item w3-button w3-padding" href="marcas_modelos.php">
                <i class="fa fa-cog fa-fw">
                </i>
-               marcas & modelos
+               Marcas
             </a>
             <a class="w3-bar-item w3-button w3-padding" href="usuarios.php">
                <i class="fa fa-cog fa-fw">
                </i>
                Usuarios
             </a>
-            <a class="w3-bar-item w3-button w3-padding" href="#">
+            <a class="w3-bar-item w3-button w3-padding" href="modelos.php">
                <i class="fa fa-cog fa-fw">
                </i>
-               xxxxxxxx
+               Modelos
             </a>
             <a class="w3-bar-item w3-button w3-padding" href="#">
                <i class="fa fa-cog fa-fw">
