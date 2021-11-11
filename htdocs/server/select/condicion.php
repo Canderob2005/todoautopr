@@ -4,7 +4,7 @@ select_condicion();
 function select_condicion()
 {
 
-   include "../server/conn.php";
+   include "./conn/conn.php";
    try {
       $conn =
       new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

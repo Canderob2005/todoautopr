@@ -2,7 +2,7 @@
 select_pueblos();
 function select_pueblos()
 {
-   include "../server/conn.php";
+   include "./conn/conn.php";
    try {
       $conn =
       new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

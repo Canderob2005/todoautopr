@@ -5,7 +5,7 @@ select_categoria();
 function select_categoria()
 {
 
-   include "../server/conn.php";
+   include "./conn/conn.php";
    try {
       $conn =
       new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
