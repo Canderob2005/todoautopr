@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8"/>
-      <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-      <title>
-         Document
-      </title>
-   </head>
-   <body>
-
-   	<?php
+<?php
 
 $respuesta = anuncio();
 
@@ -161,9 +150,9 @@ function insertar_imagenes($imagenes, $idanuncio, $pagado)
    $cantidad_imagenes = count($imagenes['imagenes']['name']);
 
    if ($descripcion_de_la_imagenes) {
-      $ruta_directorio = crea_directorio($idanuncio);
+      $directorio = crea_directorio($idanuncio);
 
-      if ($ruta_directorio) {
+      if ($directorio) {
          for ($i = 0; $i < $cantidad_imagenes; $i++) {
 
             $tmp_name      = $imagenes["imagenes"]["tmp_name"][$i];
@@ -171,13 +160,13 @@ function insertar_imagenes($imagenes, $idanuncio, $pagado)
             $numero_imagen = $i + 1;
             $name .= basename($imagenes["imagenes"]["name"][$i]);
 
-            move_uploaded_file($tmp_name, "{$ruta_directorio}/{$name}");
+            move_uploaded_file($tmp_name, "../../archivo/{$directorio}/{$name}");
 
             regustra_imagenes(
                $idanuncio,
                $name,
                $descripcion_de_la_imagenes,
-               $ruta_directorio, $numero_imagen);
+               $directorio, $numero_imagen);
 
          }
 
@@ -202,7 +191,10 @@ function insertar_imagenes($imagenes, $idanuncio, $pagado)
 
 function crea_directorio($idanuncio)
 {
-   $nombre_directorio = "../img/{$idanuncio}";
+   // Nombre del directorio sera el id así se colocarían
+   // en cualquier directorio y se encuentran los directorios creados.
+   // Esta función los almacena en archivos  peor puede cambiar en el futuro
+   $nombre_directorio = "../../archivo/{$idanuncio}";
 
    if (!file_exists($nombre_directorio)) {
 
@@ -212,12 +204,12 @@ function crea_directorio($idanuncio)
 
       } else {
 
-         return $nombre_directorio;
+         return $idanuncio;
       }
 
    } else {
 
-      return $nombre_directorio;
+      return $idanuncio;
    }
 
 }
@@ -226,7 +218,7 @@ function crea_directorio($idanuncio)
 //  Busca el nombre de la marca y el id de la marca y encuera los nombres
 function genera_descripcion()
 {
-
+   include '../../conn/conn.php';
    if (isset($_POST['idmarca']) && $_POST['idmarca'] != "" &&
       isset($_POST['idmodelo']) && $_POST['idmodelo'] != "") {
       $idmarca  = intval($_POST['idmarca']);
@@ -234,7 +226,6 @@ function genera_descripcion()
 
       try {
 
-         include '../../conn/conn.php';
          $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
          $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
          $stmt = $conn->prepare(
@@ -270,9 +261,8 @@ function genera_descripcion()
 // =====================================================================
 function regustra_imagenes($idanuncio, $ruta_imagen, $descripcion_imagen, $nombre_directorio, $numero_imagen)
 {
-
+   include '../../conn/conn.php';
    try {
-      include 'conn.php';
 
       $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -299,8 +289,4 @@ function regustra_imagenes($idanuncio, $ruta_imagen, $descripcion_imagen, $nombr
 
    }
 
-}; // =====================================================================
-
-?>
-   </body>
-</html>
+};

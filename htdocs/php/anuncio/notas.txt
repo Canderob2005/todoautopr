@@ -1,0 +1,4 @@
+NOtas de los ficheros del directorio. 
+
+Fichero en uso {anuncio.php}, el fichero {anmuncio2.php} fue el que demoro el trabajo ya que no se ejecutaba en el servidor gratuito d pruebas.
+SE debe elegir la mejor opción para lanzar a producción.
