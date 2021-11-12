@@ -1,3 +1,0 @@
-<?php
-
-include "borrador.php";

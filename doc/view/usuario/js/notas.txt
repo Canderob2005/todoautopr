@@ -1,2 +1,0 @@
-NOTA:
-Verificar implementación de los ficheros getmarcas.js y getmodelo.js

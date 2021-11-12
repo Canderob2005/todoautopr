@@ -1,3 +1,0 @@
-l1 - l12 	Responsive sizes for large screens 	
-m1 - m12 	Responsive sizes for medium screens 	
-s1 - s12 	Responsive sizes for small screens
