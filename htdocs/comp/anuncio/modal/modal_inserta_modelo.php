@@ -13,10 +13,14 @@
                   a la base de datos.
                </h4>
             </div>
-            <div class="w3-container w3-card-4 w3-padding-16 w3-red contenedor_mensaje" style="display: none;">
+     <!--        <div class="w3-container w3-card-4 w3-padding-16 w3-red contenedor_mensaje" style="display: none;">
                <p class="w3-center mensaje">
                   Error! La modelo que intentas ingresar ya existe en nuestra base de datos.
                </p>
+            </div> -->
+                <div class="w3-panel w3-pale-yellow w3-topbar w3-bottombar w3-border-yellow contenedor_mensaje" style="display: none;">
+              <p class="w3-center  mensaje">
+              </p>
             </div>
          </header>
          <div class="w3-container padding_none">
@@ -24,7 +28,8 @@
                <div class="w3-container padding_none w3-center">
                   <div class="w3-container modal_half zona_agrega_modelo">
                      <label class="w3-left-align" style="font-weight: bold;">
-                        Agrega el nombre de la modelo del
+                        Nombre del modelo
+                        <br/>
                         <span class="nombre_modelo_modal">
                         </span>
                      </label>

@@ -31,7 +31,10 @@
                 </span>
               </label>
               <input class="my_input txt_marca" placeholder="Escribir..." type="text"/>
-              <img alt="" class="img_check display_inine imagen_alerta" src="./img/icons/done_outline-24px.svg" style="padding: 10px;border-radius: 50px;"/>
+              <img alt="" class="img_check display_inine imagen_alerta" src="./img/icons/done_outline-24px.svg" style="padding: 10px;border-radius: 50px; clear: both;"/>
+              <span class="edicion_rapida" style="display:none; margin: -20px auto 0px auto;  color: blue; padding:0px; background-color: red; width:50%">
+                editar nombre
+              </span>
             </div>
           </div>
         </div>

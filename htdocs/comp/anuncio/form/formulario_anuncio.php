@@ -1,4 +1,4 @@
-<!-- <form action="../server/anuncio.php" autocomplete="off" method="POST"> -->
+<!-- <form action="../php/anuncio.php" autocomplete="off" method="POST"> -->
 <div class="contenedor_formulario" style="display:none">
   <form autocomplete="off" method="POST">
     <!-- <form> -->
@@ -46,7 +46,7 @@
                   <option selected="" value="">
                     Selecciona un Pueblo
                   </option>
-                  <?php include './server/pueblos.php';?>
+                  <?php include './php/pueblos.php';?>
                 </select>
               </div>
             </div>
@@ -83,22 +83,16 @@
                   <option selected="" value="">
                     Selecciona una Categoria
                   </option>
-                  <?php include './server/select/categorias.php';?>
+                  <?php include './php/select/categorias.php';?>
                 </select>
               </div>
             </div>
             <!--  Completado -->
             <!-- ///////////////////////////////////////////// -->
-            <!-- ////////////////////////////////////////////
-
-               /////////////////////////////////////////////////
-
-               -----------------------------------------------------
-               Sector critico para la amanipulacion de una insercion
-               anonima  por parte del usuario
-               ----------------------------------------------------
-
-               -->
+            <!--
+            Sector critico para la amanipulacion de una insercion
+            anonima  por parte del usuario
+             -->
             <div class="w3-col contenedor_marcas_modelos">
               <div class="w3-row">
                 <div class="w3-col pb-3 seccion_marca">
@@ -112,7 +106,7 @@
                           <option id="marca_selecionada_defecto" selected="" value="Selecciona una Marca">
                             Selecciona una Marca
                           </option>
-                          <?php include './server/marcas.php';?>
+                          <?php include './php/marcas.php';?>
                         </select>
                       </div>
                       <!-- =============================================== -->
@@ -130,26 +124,23 @@
                           Modelo:
                         </label>
                         <select class="form-control w3-input select_modelo" id="modelo" name="modelo" required="">
+                          <option selected="" value="vacio">
+                            Selecciona el modelo
+                          </option>
                         </select>
                       </div>
-                      <!-- ============================================================== -->
+                      <!--
+                        ==============================================================
+                      -->
                       <input class="form-control w3-btn w3-orange agregar_un_modelo" name="" style="width: 100%;" type="button" value="Agregar un modelo si no existe"/>
-                      <!-- ============================================================== -->
+                      <!--
+                      ==============================================================
+                    -->
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- /////////////////////////////////////////////
-
-               ////////////////////////////////////////////////
-
-
-
-
-
-               -->
-            <!-- //////////////////////////////////////////// -->
             <!-- Completado -->
             <div class="w3-col mb-3 bordes_seciones w3-panel borde_year">
               <label aria-label="year" class="form-label" for="year">
@@ -157,7 +148,7 @@
               </label>
               <br/>
               <!--   <input aria-describedby="year" class="form-control w3-input" id="year" name="year" required="" type="text"/> -->
-              <?php include "./server/select/ano.php";?>
+              <?php include "./php/select/ano.php";?>
             </div>
           </div>
           <div class="w3-row">
@@ -190,7 +181,7 @@
                   <option selected="" value="">
                     Selecciona la Condición
                   </option>
-                  <?php include './server/select/condicion.php';?>
+                  <?php include './php/select/condicion.php';?>
                 </select>
               </div>
             </div>
@@ -204,7 +195,7 @@
                   <option selected="" value="">
                     Seleccione la transmisión
                   </option>
-                  <?php include './server/select/transmissiones.php';?>
+                  <?php include './php/select/transmissiones.php';?>
                 </select>
               </div>
             </div>
@@ -420,4 +411,9 @@
       </div>
     </div>
   </form>
+  <!-- ================================================ -->
+  <input class="temp_categoria" type="hidden" value=""/>
+  <input class="temp_marca" type="hidden" value=""/>
+  <input class="temp_modelo" type="hidden" value=""/>
+  <!-- ================================================ -->
 </div>
