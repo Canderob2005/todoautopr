@@ -1,5 +1,3 @@
-	// var img_cantidad = 0;
-
 	function insertar_anuncio(argument) {
 
 		// Selección  del botón para enviar
@@ -33,7 +31,7 @@
 				//  Si el elemento seleccionado tiene un valor de si entonces  
 				// realizara el condicional a continuación 
 				if (this.value == "si") {
-					console.log('si');
+					// console.log('si');
 					img_cantidad = 4;
 
 					mensaje = "Anuncios pagados  pueden  publicar " + img_cantidad + " imágenes";
@@ -45,7 +43,7 @@
 				//  Si le elemento tiene el  valor de no entonces realizara 
 				// las siguientes instrucciones 
 				if (this.value == "no") {
-					console.log('no');
+					// console.log('no');
 					img_cantidad = 2;
 					mensaje = "Anuncios gratuitos pueden  publicar " + img_cantidad + " imágenes";
 
@@ -101,7 +99,6 @@
 		let transmision =
 			document.getElementById("transmision");
 
-
 		let licencia =
 			document.querySelectorAll(
 				'[name="licencia"]'
@@ -127,432 +124,416 @@
 		//////////////////////////////////////////////////////////
 		// NOTA trabajar con la validacion 
 
-		btn_enviar.addEventListener(
-			"click",
-			function(argument) {
+		btn_enviar.addEventListener("click", function(argument) {
 
-				var campo_vacio = {
-					"nombre": "null",
-					"pagado": "null",
-					"pueblo": "null",
-					"telefono": "null",
-					"correo": "null",
-					"categoria": "null",
-					"marca": "null",
-					"modelo": "null",
-					"year": "null",
-					"clasificacion": "null",
-					"condicion": "null",
-					"transmision": "null",
-					"licencia": "null", // ***********
-					"full_lablel": "null",
-					"multas": "null",
-					"millaje": "null",
-					"precio": "null",
-					"statusprecio": "null",
-					"descripcion": "null"
-				};
-				// var campo_vacio = true;
+			var campo_vacio = {
+				"nombre": "null",
+				"pagado": "null",
+				"pueblo": "null",
+				"telefono": "null",
+				"correo": "null",
+				"categoria": "null",
+				"marca": "null",
+				"modelo": "null",
+				"year": "null",
+				"clasificacion": "null",
+				"condicion": "null",
+				"transmision": "null",
+				"licencia": "null", // ***********
+				"full_lablel": "null",
+				"multas": "null",
+				"millaje": "null",
+				"precio": "null",
+				"statusprecio": "null",
+				"descripcion": "null"
+			};
+			// var campo_vacio = true;
 
-				argument.preventDefault();
+			argument.preventDefault();
 
-				// console.log(valida_campo_vacio(nombre));
+			console.log(valida_campo_vacio(nombre));
 
-				if (valida_campo_vacio(nombre)) {
+			if (valida_campo_vacio(nombre)) {
 
-					let borde = document.querySelector(".borde_nombre");
-					borde.style.border = "2px solid red";
-					campo_vacio.nombre = "vacio";
+				let borde = document.querySelector(".borde_nombre");
+				borde.style.border = "2px solid red";
+				campo_vacio.nombre = "vacio";
 
+			} else {
+
+				let borde = document.querySelector(".borde_nombre");
+				borde.style.border = "none";
+				campo_vacio.nombre = "lleno";
+			}
+
+			// ----
+
+			if (fun_radio_button_value(pagado) == undefined) {
+
+				let borde = document.querySelector(".borde_pagado");
+				borde.style.border = "2px solid red";
+				campo_vacio.pagado = "vacio";
+
+			} else {
+
+				let borde = document.querySelector(".borde_pagado");
+				borde.style.border = "none";
+				campo_vacio.pagado = "lleno";
+			}
+
+			// --
+
+			if (valida_campo_vacio(pueblo)) {
+
+				let borde = document.querySelector(".borde_pueblo");
+				borde.style.border = "2px solid red";
+				campo_vacio.pueblo = "vacio";
+
+			} else {
+
+				let borde = document.querySelector(".borde_pueblo");
+				borde.style.border = "none";
+				campo_vacio.pueblo = "lleno";
+
+			}
+
+			if (valida_campo_vacio(telefono)) {
+				let borde = document.querySelector(".borde_telefono");
+				borde.style.border = "2px solid red";
+				campo_vacio.telefono = "vacio";
+
+			} else {
+				let borde = document.querySelector(".borde_telefono");
+				borde.style.border = "none";
+				campo_vacio.telefono = "lleno";
+			}
+
+			if (valida_campo_vacio(correo)) {
+				let borde = document.querySelector(".borde_correo");
+				borde.style.border = "2px solid red";
+				campo_vacio.correo = "vacio";
+
+			} else {
+
+				let borde = document.querySelector(".borde_correo");
+				borde.style.border = "none";
+				campo_vacio.correo = "lleno";
+
+			}
+
+			if (valida_campo_vacio(categoria)) {
+				let borde = document.querySelector(".borde_categoria");
+				borde.style.border = "2px solid red";
+				campo_vacio.categoria = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_categoria");
+				borde.style.border = "none";
+				campo_vacio.categoria = "lleno";
+			}
+
+			if (valida_campo_vacio_marca(marca)) {
+				let borde = document.querySelector(".borde_marca");
+				borde.style.border = "2px solid red";
+				campo_vacio.marca = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_marca");
+				borde.style.border = "none";
+				campo_vacio.marca = "lleno";
+			}
+
+			if (valida_campo_vacio(modelo)) {
+				let borde = document.querySelector(".borde_modelo");
+				borde.style.border = "2px solid red";
+				campo_vacio.modelo = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_modelo");
+				borde.style.border = "none";
+				campo_vacio.modelo = "lleno";
+			}
+
+			if (valida_campo_vacio(year)) {
+				let borde = document.querySelector(".borde_year");
+				borde.style.border = "2px solid red";
+				campo_vacio.year = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_year");
+				borde.style.border = "none";
+				campo_vacio.year = "lleno";
+			}
+
+			if (valida_campo_vacio(clasificacion)) {
+				let borde = document.querySelector(".borde_clasificacion");
+				borde.style.border = "2px solid red";
+				campo_vacio.clasificacion = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_clasificacion");
+				borde.style.border = "none";
+				campo_vacio.clasificacion = "lleno";
+			}
+
+			if (valida_campo_vacio(condicion)) {
+				let borde = document.querySelector(".borde_condicion");
+				borde.style.border = "2px solid red";
+				campo_vacio.condicion = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_condicion");
+				borde.style.border = "none";
+				campo_vacio.condicion = "lleno";
+			}
+
+			if (valida_campo_vacio(transmision)) {
+				let borde = document.querySelector(".borde_transmision");
+				borde.style.border = "2px solid red";
+				campo_vacio.transmision = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_transmision");
+				borde.style.border = "none";
+				campo_vacio.transmision = "lleno";
+			}
+
+			if (fun_radio_button_value(licencia) == undefined) {
+				let borde = document.querySelector(".borde_licencia");
+				borde.style.border = "2px solid red";
+				campo_vacio.licencia = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_licencia");
+				borde.style.border = "none";
+				campo_vacio.licencia = "lleno";
+			}
+
+			if (fun_radio_button_value(full_lablel) == undefined) {
+				let borde = document.querySelector(".borde_full_label");
+				borde.style.border = "2px solid red";
+				campo_vacio.full_lablel = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_full_label");
+				borde.style.border = "none";
+				campo_vacio.full_lablel = "lleno";
+			}
+
+			if (fun_radio_button_value(multas) == undefined) {
+				let borde = document.querySelector(".borde_multas");
+				borde.style.border = "2px solid red";
+				campo_vacio.multas = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_multas");
+				borde.style.border = "none";
+				campo_vacio.multas = "lleno";
+
+			}
+
+			if (valida_campo_vacio(millaje)) {
+				let borde = document.querySelector(".borde_millaje");
+				borde.style.border = "2px solid red";
+				campo_vacio.millaje = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_millaje");
+				borde.style.border = "none";
+				campo_vacio.millaje = "lleno";
+			}
+
+			if (valida_campo_vacio(precio)) {
+				let borde = document.querySelector(".borde_precio");
+				borde.style.border = "2px solid red";
+				campo_vacio.precio = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_precio");
+				borde.style.border = "none";
+				campo_vacio.precio = "lleno";
+			}
+
+			if (fun_radio_button_value(statusprecio) == undefined) {
+				let borde = document.querySelector(".borde_precio_final");
+				borde.style.border = "2px solid red";
+				campo_vacio.statusprecio = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_precio_final");
+				borde.style.border = "none";
+				campo_vacio.statusprecio = "lleno";
+			}
+
+			if (valida_campo_vacio(descripcion)) {
+
+				let borde = document.querySelector(".borde_descripcion");
+				borde.style.border = "2px solid red";
+				campo_vacio.descripcion = "vacio";
+			} else {
+				let borde = document.querySelector(".borde_descripcion");
+				borde.style.border = "none";
+				campo_vacio.descripcion = "lleno";
+			}
+
+			//  Valida los campos 
+			function valida_campo_vacio(argument) {
+
+				// console.log(argument.value);
+
+				// if (!argument == null) {
+				if (argument.value == "") {
+					// console.log("vacio");
+					return true;
 				} else {
-
-					let borde = document.querySelector(".borde_nombre");
-					borde.style.border = "none";
-					campo_vacio.nombre = "lleno";
+					// console.log("lleno");
+					console.log(false);
+					return false;
 				}
 
-				// ----
-
-				if (fun_radio_button_value(pagado) == undefined) {
-
-					let borde = document.querySelector(".borde_pagado");
-					borde.style.border = "2px solid red";
-					campo_vacio.pagado = "vacio";
-
-				} else {
-
-					let borde = document.querySelector(".borde_pagado");
-					borde.style.border = "none";
-					campo_vacio.pagado = "lleno";
-				}
-
-				// --
-
-				if (valida_campo_vacio(pueblo)) {
-
-					let borde = document.querySelector(".borde_pueblo");
-					borde.style.border = "2px solid red";
-					campo_vacio.pueblo = "vacio";
-
-				} else {
-
-					let borde = document.querySelector(".borde_pueblo");
-					borde.style.border = "none";
-					campo_vacio.pueblo = "lleno";
-
-				}
-
-				if (valida_campo_vacio(telefono)) {
-					let borde = document.querySelector(".borde_telefono");
-					borde.style.border = "2px solid red";
-					campo_vacio.telefono = "vacio";
-
-				} else {
-					let borde = document.querySelector(".borde_telefono");
-					borde.style.border = "none";
-					campo_vacio.telefono = "lleno";
-				}
-
-				if (valida_campo_vacio(correo)) {
-					let borde = document.querySelector(".borde_correo");
-					borde.style.border = "2px solid red";
-					campo_vacio.correo = "vacio";
-
-				} else {
-
-					let borde = document.querySelector(".borde_correo");
-					borde.style.border = "none";
-					campo_vacio.correo = "lleno";
-
-				}
-
-				if (valida_campo_vacio(categoria)) {
-					let borde = document.querySelector(".borde_categoria");
-					borde.style.border = "2px solid red";
-					campo_vacio.categoria = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_categoria");
-					borde.style.border = "none";
-					campo_vacio.categoria = "lleno";
-				}
-
-
-				if (valida_campo_vacio_marca(marca)) {
-					let borde = document.querySelector(".borde_marca");
-					borde.style.border = "2px solid red";
-					campo_vacio.marca = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_marca");
-					borde.style.border = "none";
-					campo_vacio.marca = "lleno";
-				}
-
-				if (valida_campo_vacio(modelo)) {
-					let borde = document.querySelector(".borde_modelo");
-					borde.style.border = "2px solid red";
-					campo_vacio.modelo = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_modelo");
-					borde.style.border = "none";
-					campo_vacio.modelo = "lleno";
-				}
-
-				if (valida_campo_vacio(year)) {
-					let borde = document.querySelector(".borde_year");
-					borde.style.border = "2px solid red";
-					campo_vacio.year = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_year");
-					borde.style.border = "none";
-					campo_vacio.year = "lleno";
-				}
-
-				if (valida_campo_vacio(clasificacion)) {
-					let borde = document.querySelector(".borde_clasificacion");
-					borde.style.border = "2px solid red";
-					campo_vacio.clasificacion = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_clasificacion");
-					borde.style.border = "none";
-					campo_vacio.clasificacion = "lleno";
-				}
-
-				if (valida_campo_vacio(condicion)) {
-					let borde = document.querySelector(".borde_condicion");
-					borde.style.border = "2px solid red";
-					campo_vacio.condicion = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_condicion");
-					borde.style.border = "none";
-					campo_vacio.condicion = "lleno";
-				}
-
-				if (valida_campo_vacio(transmision)) {
-					let borde = document.querySelector(".borde_transmision");
-					borde.style.border = "2px solid red";
-					campo_vacio.transmision = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_transmision");
-					borde.style.border = "none";
-					campo_vacio.transmision = "lleno";
-				}
-
-				if (fun_radio_button_value(licencia) == undefined) {
-					let borde = document.querySelector(".borde_licencia");
-					borde.style.border = "2px solid red";
-					campo_vacio.licencia = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_licencia");
-					borde.style.border = "none";
-					campo_vacio.licencia = "lleno";
-				}
-
-				if (fun_radio_button_value(full_lablel) == undefined) {
-					let borde = document.querySelector(".borde_full_label");
-					borde.style.border = "2px solid red";
-					campo_vacio.full_lablel = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_full_label");
-					borde.style.border = "none";
-					campo_vacio.full_lablel = "lleno";
-				}
-
-				if (fun_radio_button_value(multas) == undefined) {
-					let borde = document.querySelector(".borde_multas");
-					borde.style.border = "2px solid red";
-					campo_vacio.multas = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_multas");
-					borde.style.border = "none";
-					campo_vacio.multas = "lleno";
-
-				}
-
-				if (valida_campo_vacio(millaje)) {
-					let borde = document.querySelector(".borde_millaje");
-					borde.style.border = "2px solid red";
-					campo_vacio.millaje = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_millaje");
-					borde.style.border = "none";
-					campo_vacio.millaje = "lleno";
-				}
-
-				if (valida_campo_vacio(precio)) {
-					let borde = document.querySelector(".borde_precio");
-					borde.style.border = "2px solid red";
-					campo_vacio.precio = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_precio");
-					borde.style.border = "none";
-					campo_vacio.precio = "lleno";
-				}
-
-				if (fun_radio_button_value(statusprecio) == undefined) {
-					let borde = document.querySelector(".borde_precio_final");
-					borde.style.border = "2px solid red";
-					campo_vacio.statusprecio = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_precio_final");
-					borde.style.border = "none";
-					campo_vacio.statusprecio = "lleno";
-				}
-
-				if (valida_campo_vacio(descripcion)) {
-
-					let borde = document.querySelector(".borde_descripcion");
-					borde.style.border = "2px solid red";
-					campo_vacio.descripcion = "vacio";
-				} else {
-					let borde = document.querySelector(".borde_descripcion");
-					borde.style.border = "none";
-					campo_vacio.descripcion = "lleno";
-				}
-
-
-
-				//  Valida los campos 
-				function valida_campo_vacio(argument) {
-
-
-					console.log(argument);
-					if (argument.value == "") {
-						console.log("vacio");
-						return true;
-					} else {
-						console.log("lleno");
-						// console.log(false);
-						return false;
-					}
-				}
-
-				// ================================================
-
-
-
-				// =================================================
-				//  valida solo el campo dela marca 
-				function valida_campo_vacio_marca(argument) {
-					// console.log(argument.value);
-					if (argument.value != "Selecciona una Marca") {
-
-						// console.log(true);
-						return false;
-					} else {
-						// console.log(false);
-						return true;
-					}
-				}
-
-				// =================================================
-
-
-
-				// ==============================================
-				// Captura los valores del radio buttons
-				function fun_radio_button_value(btn_radio) {
-					let resultado;
-					for (var i = 0; i < btn_radio.length; i++) {
-						console.log("La seleccion " + i);
-						console.log(btn_radio[i].checked);
-
-						if (btn_radio[i].checked) {
-
-							resultado = btn_radio[i].value;
-						}
-
-
-					}
-					console.log(resultado);
-					console.log("======================");
-					if (resultado != undefined) {
-
-						return resultado;
-
-					} else {
-
-						return resultado;
-					}
-
-				}
-				// ==============================================
-				const entries = Object.entries(campo_vacio);
-
-				console.log(entries);
-				let campos_llenos = [];
-				for (var i = 0; i < entries.length; i++) {
-					console.log(entries[i][1]);
-					campos_llenos.push(entries[i][1]);
-				}
-
-
-
-				let formData = new FormData();
-				//  Agregamos los datos al formdata
-				formData.append("nombre", nombre.value);
-				formData.append("pagado", fun_radio_button_value(pagado));
-				formData.append("pueblo", pueblo.value);
-				formData.append("year", year.value);
-				formData.append("telefono", telefono.value);
-				formData.append("correo", correo.value);
-				formData.append("categoria", categoria.value);
-				// ===================================================
-				// NOTA para campo marca valor para el servidor 
-				// 
-				// Este campo debe extraer el texto del option
-				// ya que se usa el valor numerico para retornar los modelos 
-				// de lo contrario quebrara la aplicacion con 
-				// repercuciones de fallas no deseadas 
-				console.log('========================================================');
-				let option_marca = document.querySelectorAll("#marca option");
-				// console.log(option_marca);
-				// console.log(marca);
-				// console.log(marca.value);
-
-				for (var i = 0; i < option_marca.length; i++) {
-					if (option_marca[i].value == marca.value) {
-						// console.log(option_marca[i].value);
-						// console.log();
-						formData.append("marca", option_marca[i].textContent);
-					}
-				}
-				// formData.append("marca", marca.value);
-				console.log('========================================================');
-				// ===================================================
-				formData.append("modelo", modelo.value);
-				formData.append("clasificacion", clasificacion.value);
-				formData.append("condicion", condicion.value);
-				formData.append("transmision", transmision.value);
-				formData.append("licencia", fun_radio_button_value(licencia));
-				formData.append("full_lablel", fun_radio_button_value(full_lablel));
-				formData.append("multas", fun_radio_button_value(multas));
-				formData.append("millaje", millaje.value);
-				formData.append("precio", precio.value);
-				formData.append("statusprecio", fun_radio_button_value(statusprecio));
-				formData.append("descripcion", descripcion.value);
-
-				//  Investigación aquí 
-				// https://stackoverflow.com/questions/16104078/appending-array-to-formdata-and-send-via-ajax#28434829
-				for (var i = 0; i < ficheros.length; i++) {
-					// let nombre = "nombre" + i;
-					formData.append("imagenes[]", ficheros[i]);
-				}
-				// ==================================================================
-				//  Verifica campos y decide si enviar o no 
-				var cantidad_imagenes = 0;
-				if (campos_llenos.includes("vacio")) {
-					console.log("Verifica los datos");
-
-				} else {
-
-					for (var i = 0; i < ficheros.length; i++) {
-						if (ficheros[i] != " ") {
-							cantidad_imagenes += 1;
-						}
-					}
-
-					if (cantidad_imagenes > 0) {
-						// cantidad_imagenes = 0;
-						fun_enviar(formData);
-						console.log("enviado");
-					} else {
-
-						console.log("Verifica las imagenes ");
-					}
-
-					console.log('============================');
-					console.log('Cantidad de ficheros');
-					console.log(ficheros.length);
-					console.log('Cantidad de iagenes');
-					console.log(cantidad_imagenes);
-					console.log(ficheros);
-					console.log('============================');
-					// console.log("Tienes campos vacios");
-					cantidad_imagenes = 0;
-
-					// console.log(ficheros.length);
-					// console.log(cantidad_imagenes);
-					// console.log(ficheros);
-
-					// fun_enviar(formData);
-				}
-				// ==================================================================
-				console.log(formData);
-				// El formulario se  envía de igual forma  formdata evalúa los 
-				// datos y no llegara como objeto JSON si no que llegaran 
-				// tal y como se envían , PHP se encargara de lo demás 
-				// console.log(formData);
-				// if (campo_vacio) {
-				// 	alert("exito");
-				// 	// fun_enviar(formData);
 				// } else {
-				// 	alert("Campo vacío");
+				// 	return false;
 				// }
 
+			}
 
+			// ================================================
 
-			});
+			// =================================================
+			//  valida solo el campo dela marca 
+			function valida_campo_vacio_marca(argument) {
+				console.log(argument.value);
+				if (argument.value != "Selecciona una Marca") {
 
+					console.log(true);
+					return false;
+				} else {
+					console.log(false);
+					return true;
+				}
+			}
+
+			// =================================================
+
+			// ==============================================
+			// Captura los valores del radio buttons
+			function fun_radio_button_value(btn_radio) {
+				let resultado;
+				for (var i = 0; i < btn_radio.length; i++) {
+					// console.log("La seleccion " + i);
+					// console.log(btn_radio[i].checked);
+
+					if (btn_radio[i].checked) {
+
+						resultado = btn_radio[i].value;
+					}
+
+				}
+				// console.log(resultado);
+				// console.log("======================");
+				if (resultado != undefined) {
+
+					return resultado;
+
+				} else {
+
+					return resultado;
+				}
+
+			}
+			// ==============================================
+			const entries = Object.entries(campo_vacio);
+
+			// console.log(entries);
+			let campos_llenos = [];
+			for (var i = 0; i < entries.length; i++) {
+				// console.log(entries[i][1]);
+				campos_llenos.push(entries[i][1]);
+			}
+
+			let formData = new FormData();
+			//  Agregamos los datos al formdata
+			formData.append("nombre", nombre.value);
+			formData.append("pagado", fun_radio_button_value(pagado));
+			formData.append("idpueblo", pueblo.value);
+			formData.append("year", year.value);
+			formData.append("telefono", telefono.value);
+			formData.append("correo", correo.value);
+			formData.append("idcategoria", categoria.value);
+			// ===================================================
+			// NOTA para campo marca valor para el servidor 
+			// 
+			// Este campo debe extraer el texto del option
+			// ya que se usa el valor numerico para retornar los modelos 
+			// de lo contrario quebrara la aplicacion con 
+			// repercuciones de fallas no deseadas 
+			console.log('========================================================');
+			// let option_marca = document.querySelectorAll("#marca option");
+			// console.log(option_marca);
+			// console.log(marca);
+			// console.log(marca.value);
+
+			// for (var i = 0; i < option_marca.length; i++) {
+			// 	if (option_marca[i].value == marca.value) {
+			// console.log(option_marca[i].value);
+			// console.log();
+			// 		formData.append("marca", option_marca[i].textContent);
+			// 	}
+			// }
+			formData.append("idmarca", marca.value);
+			// console.log('========================================================');
+			// ===================================================
+			formData.append("idmodelo", modelo.value);
+			formData.append("idclasificacion", clasificacion.value);
+			formData.append("idcondicion", condicion.value);
+			formData.append("idtransmission", transmision.value);
+			formData.append("licencia", fun_radio_button_value(licencia));
+			formData.append("full_lablel", fun_radio_button_value(full_lablel));
+			formData.append("multas", fun_radio_button_value(multas));
+			formData.append("millaje", millaje.value);
+			formData.append("precio", precio.value);
+			formData.append("statusprecio", fun_radio_button_value(statusprecio));
+			formData.append("descripcion", descripcion.value);
+
+			//  Investigación aquí 
+			// https://stackoverflow.com/questions/16104078/appending-array-to-formdata-and-send-via-ajax#28434829
+			for (var i = 0; i < ficheros.length; i++) {
+				// let nombre = "nombre" + i;
+				formData.append("imagenes[]", ficheros[i]);
+			}
+			// ==================================================================
+			//  Verifica campos y decide si enviar o no 
+			var cantidad_imagenes = 0;
+			if (campos_llenos.includes("vacio")) {
+				// console.log("Verifica los datos");
+
+			} else {
+
+				for (var i = 0; i < ficheros.length; i++) {
+					if (ficheros[i] != " ") {
+						cantidad_imagenes += 1;
+					}
+				}
+
+				if (cantidad_imagenes > 0) {
+
+					// cantidad_imagenes = 0;
+					fun_enviar(formData);
+					// console.log("enviado");
+				} else {
+
+					// console.log("Verifica las imagenes ");
+				}
+
+				cantidad_imagenes = 0;
+
+				console.log(ficheros.length);
+				console.log(cantidad_imagenes);
+				console.log(ficheros);
+
+				// fun_enviar(formData);
+			}
+			// ==================================================================
+			// console.log(formData);
+			// El formulario se  envía de igual forma  formdata evalúa los 
+			// datos y no llegara como objeto JSON si no que llegaran 
+			// tal y como se envían , PHP se encargara de lo demás 
+			console.log(formData);
+			// if (campo_vacio) {
+			// 	alert("exito");
+			// 	// fun_enviar(formData);
+			// } else {
+			// 	alert("Campo vacío");
+			// }
+
+		});
 
 		// NOTA trabajar con la validacion 
 		//////////////////////////////////////////////////////////
@@ -564,9 +545,9 @@
 		function fun_enviar(data) {
 
 			let datos = data;
-
+			// NOTA: INSERTAR_ANUNCIO
 			$.ajax({
-				url: '../server/anuncio2.php',
+				url: './php/anuncio/anuncio.php',
 				type: 'POST',
 				data: datos,
 				contentType: false,
@@ -574,36 +555,49 @@
 				processData: false,
 			}).done(function() {
 
-				console.log("success");
+				// console.log("success");
 
 			}).fail(function(error) {
 
-				console.log(error);
+				// console.log(error);
 
 			}).always(function(resultado) {
 
 				// ========================================================
 				console.log(resultado);
 
-				// const respuesta = JSON.parse(resultado);
+				let respuesta = JSON.parse(resultado);
+				console.log(respuesta.respuesta);
+				if (respuesta.respuesta == "error") {
+					let modal_error_enviar = document.getElementById("modal_error_enviar");
+					modal_error_enviar.style.display = "block";
+				} else if (respuesta.respuesta == "exito") {
+					formData = null;
+					alert("Se inserto bien");
+					let contenedor_anuncio = document.querySelector(".contenedor_anuncio");
+					contenedor_anuncio.style.display = "none";
 
-				// if (respuesta.respuesta == "error") {
-				// 	let modal_error_enviar = document.getElementById("modal_error_enviar");
-				// 	modal_error_enviar.style.display = "block";
-				// } else if (respuesta.respuesta == "exito") {
-				// 	alert("Se inserto bien");
-				// 	let btn_enviar = document.getElementById("enviar");
-				// 	btn_enviar.disabled = true;
-				// 	window.location.replace("ver_anuncios.php");
-				// }
+					let = modal_error_enviar = document.getElementById("modal_error_enviar");
+					modal_error_enviar.style.display = "block";
+
+					// let btn_enviar = document.getElementById("enviar");
+					let btn_aceptar = document.querySelector("#modal_error_enviar .btn_aceptar");
+					btn_aceptar.addEventListener("click", function(argument) {
+						modal_error_enviar.style.display = "none";
+						window.location.replace("ver_anuncios.php");
+					});
+					// btn_enviar.disabled = true;
+
+				}
+
 				// Controlar la respuesta del servidor aquí en
 				// relación con la inserción de datos incluidas las imágenes
 
-				// formData = null;
 				// ========================================================
 			});
 
 		}
-		// ==================================
 
 	}
+
+	console.log('insertar_anuncio');

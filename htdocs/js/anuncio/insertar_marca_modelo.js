@@ -4,16 +4,13 @@
   let txt_marca = document.querySelector(".modal_inserta_marca .txt_marca");
   let btn_agregar_marca = document.querySelector(".seccion_marca .btn_agregar_marca");
 
-
   console.log(modal_inserta_marca);
   console.log(txt_marca);
   btn_agregar_marca.addEventListener(
     "click",
     function(argument) {
 
-
     });
-
 
  }
  //  agregar_un_modelo.addEventListener("click",
@@ -40,7 +37,6 @@
  //          }
  //          // console.log(option_modelo[i]);
  //        }
-
 
  //        modal_insertamodelo.style.display = 'block';
  //        // incertar_marca_y_modelo();
@@ -73,15 +69,11 @@
  //      modal.style.display = 'none';
  //    });
 
-
-
  //  aprir_inserta_marca.addEventListener("click", function(argument) {
  //    modal.style.display = 'block';
 
  //  });
  // }
-
-
 
  // function incertar_marca_y_modelo(argument) {
 
@@ -120,7 +112,6 @@
  //     img_check[0].src = "../img/icons/highlight_off-24px.svg";
  //   }
 
-
  //   //  #revisar
  //   if (vacio(marca)) {
 
@@ -130,10 +121,10 @@
  //       marca: marca,
 
  //     }
- //     // let url = "../server/marca_modelo.php";
+ //     // let url = "../php/marca_modelo.php";
  //     /////////////////////////////////////////////////
  //     // Nota Zona de envió de datos 
- //     // $.post('../server/marca_modelo.php', datos,
+ //     // $.post('../php/marca_modelo.php', datos,
  //     //   function(data, textStatus, xhr) {
 
  //     //   }).always(function(data, textStatus, xhr) {
@@ -166,7 +157,7 @@
  // }
 
  // function getmarcas(argument) {
- //   $.getJSON('../server/devuelvemarcas.php', {
+ //   $.getJSON('../php/devuelvemarcas.php', {
  //     fun: 'getmarcas'
  //   }, function(json, textStatus) {
 
@@ -256,10 +247,10 @@
  //       marca: marca,
  //       modelo: modelo,
  //     }
- //     // let url = "../server/marca_modelo.php";
+ //     // let url = "../php/marca_modelo.php";
  //     // /////////////////////////////////////////////////
  //     // Nota Zona de envió de datos 
- //     // $.post('../server/marca_modelo.php', datos,
+ //     // $.post('../php/marca_modelo.php', datos,
  //     //  function(data, textStatus, xhr) {
 
  //     //  }, "json").always(function(data, textStatus, xhr) {
@@ -317,7 +308,7 @@
 
  // function getmarcas(id) {
  //  console.log('Busca marcas');
- //  $.getJSON('../server/devuelvemarcas.php', {
+ //  $.getJSON('../php/devuelvemarcas.php', {
  //    fun: 'getmarcas'
  //  }, function(json, textStatus) {
 
@@ -370,7 +361,7 @@
 
  // /////////////////////////////////////////////////
  // Nota Zona de envió de datos 
- // $.post('../server/marca_modelo.php', datos,
+ // $.post('../php/marca_modelo.php', datos,
  //  function(data, textStatus, xhr) {
 
  //  }, "json").always(function(data, textStatus, xhr) {
