@@ -20,12 +20,11 @@ function get_modelos()
 
       $stmt = $conn->prepare(
          "SELECT
-					marca.nombre as nombre_marca,
-					modelo.nombre as nombre_modelo,
-					modelo.idcategoria
-
-					FROM modelo
-					INNER JOIN marca ON modelo.idmarca=marca.idmarca"
+         marca.nombre as nombre_marca,
+         modelo.nombre as nombre_modelo,
+         modelo.idcategoria
+         FROM modelo
+         INNER JOIN marca ON modelo.idmarca=marca.idmarca"
       );
       $stmt->execute();
 

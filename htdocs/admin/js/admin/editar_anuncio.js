@@ -12,8 +12,6 @@ function editar_anuncio(argument) {
 	let contenedor_eliminar =
 		document.querySelector(".contenedor_eliminar");
 
-
-
 	let contenedor_actualizar =
 		document.querySelector(".contenedor_actualizar");
 
@@ -41,7 +39,6 @@ function editar_anuncio(argument) {
 		document.querySelector(
 			".modal_edicion_de_anuncios .btn_cancelar_actualizar_anuncio"
 		);
-
 
 	let btn_nodal_actualizar_anuncio =
 		document.querySelector(
@@ -72,11 +69,11 @@ function editar_anuncio(argument) {
 	// 	);
 
 	formulario_eliminar.setAttribute(
-		"action", "../server/eliminar/eliminar.php");
+		"action", "./server/eliminar/eliminar.php");
 	formulario_eliminar.setAttribute("method", "post");
 
 	formulario_editar.setAttribute("action",
-		"../server/editar_anuncio/ejecuta_edicion.php");
+		"./server/editar_anuncio/ejecuta_edicion.php");
 
 	formulario_editar.setAttribute("method", "post");
 
@@ -84,7 +81,6 @@ function editar_anuncio(argument) {
 		.addEventListener(
 			"click",
 			function(argument) {
-
 
 				contenedor_eliminar.style.display = "none";
 				contenedor_actualizar.style.display = "block";
@@ -102,7 +98,6 @@ function editar_anuncio(argument) {
 				// console.log(txt_input);
 				// console.log(btn_select);
 				// console.log(txt_textarea);
-
 
 			});
 
@@ -179,11 +174,7 @@ function editar_anuncio(argument) {
 
 	}
 
-
-
 }
-
-
 
 // ///////////////
 editar_anuncio();

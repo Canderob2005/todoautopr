@@ -5,7 +5,7 @@
 
 function ejecuta_edicion($value = '')
 {
-   include "../../../../conn/conn.php";
+   include "../../../conn/conn.php";
    try {
 
       $idanuncio   = intval($_POST['idanuncio']);

@@ -51,6 +51,7 @@ $data = get_modelos();
       </td>
       <td width="1%">
         <form action="">
+
           <input class="w3-btn w3-green" type="button" value="Actualizar"/>
         </form>
       </td>
