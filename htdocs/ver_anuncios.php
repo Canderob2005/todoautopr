@@ -4,7 +4,9 @@ POr esta razón el comentario pues las URL de los ficheros externos JS y CSS deb
  -->
 <!-- ================================== -->
 <!--  Se incluye la conexión  -->
-<?php include "../server/conn.php";?>
+
+
+
 <!-- ================================== -->
 <!DOCTYPE html>
 <html lang="es">
@@ -17,7 +19,7 @@ POr esta razón el comentario pues las URL de los ficheros externos JS y CSS deb
          Cabecera con enlaces a librerías
          javascript y hojas de estilos
       -->
-    <?php include_once '../comp/head.php';?>
+    <?php include_once './comp/head.php';?>
     <style type="text/css">
     .targeta .w3-card-4{
     background-color: #d6eaf8;
@@ -43,12 +45,12 @@ POr esta razón el comentario pues las URL de los ficheros externos JS y CSS deb
     }
     </style>
     <!-- ==================================== -->
-    <link href="../css/anuncio.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/anuncio.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
     <!-- ================================== -->
     <!--  Menú de navegación -->
-    <?php include_once '../comp/nav.php';?>
+    <?php include_once './comp/nav.php';?>
     <!-- ================================== -->
     <div class="w3-container">
       <br/>
@@ -58,14 +60,14 @@ POr esta razón el comentario pues las URL de los ficheros externos JS y CSS deb
          aquí se puede modificar fácilmente en
          le fichero que lo contiene
          -->
-      <?php include "../comp/slide_show/comp.php";?>
+      <?php include "./comp/slide_show/comp.php";?>
       <!-- /home/code/Escritorio/Proyecto/todoautopr/htdocs/comp/slide_show/automatic-slideshow.php -->
       <!-- =============================================== -->
       <!-- <div class="container-fluid"> -->
       <div class="w3-container w3-stretch">
         <div class="row pt-5 m-1 contenedor_anuncio">
           <!-- ============================================ -->
-          <?php include "../comp/ver_anuncios/comp.php";?>
+          <?php include "./comp/ver_anuncios/comp.php";?>
           <!-- ============================================ -->
         </div>
         <!-- ==================================== -->
@@ -75,7 +77,8 @@ POr esta razón el comentario pues las URL de los ficheros externos JS y CSS deb
     </div>
     <?php
 
-// include_once '../comp/footer.php';
+// include_once './comp/footer.php';
 ;?>
   </body>
 </html>
+
