@@ -15,16 +15,17 @@
 
 // header("Location: view/usuario/anuncio.php");
 // header("Location: anuncio.php");
+header("Location: ver_anuncios.php");
 
-if (!isset($_COOKIE['user'])) {
+// if (!isset($_COOKIE['user'])) {
 
-   header("Location: inicio_index.php");
+//    header("Location: inicio_index.php");
 
-} else {
-   header("Location: ver_anuncios.php");
-}
+// } else {
+//    header("Location: ver_anuncios.php");
+// }
 
-exit;
+// exit;
 
 // print_r(glob("./archivo/*", GLOB_ONLYDIR));
 
