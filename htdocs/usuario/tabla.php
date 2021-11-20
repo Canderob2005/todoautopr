@@ -9,7 +9,7 @@ POr esta razón el comentario pues las URL de los ficheros externos JS y CSS deb
       <title>
          Tabla
       </title>
-      <?php include_once "../../server/conn.php";?>
+      <?php include_once "../../php/conn.php";?>
       <?php include_once '../../comp/head.php';?>
       <link href="../../css/anuncio.css" rel="stylesheet" type="text/css"/>
    </head>
@@ -24,7 +24,7 @@ POr esta razón el comentario pues las URL de los ficheros externos JS y CSS deb
          <p>
          </p>
          <div class="w3-responsive" style="width: 99%;">
-            <?php include '../../server/tabla.php';?>
+            <?php include '../../php/tabla.php';?>
          </div>
       </div>
    </body>

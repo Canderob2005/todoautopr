@@ -10,7 +10,7 @@ POr esta razón el comentario pues las URL de los ficheros externos JS y CSS deb
       <title>
          Buscador
       </title>
-      <?php include_once "../../server/conn.php";?>
+      <?php include_once "../../php/conn.php";?>
       <?php include_once '../../comp/head.php';?>
    </head>
    <body>

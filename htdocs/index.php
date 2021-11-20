@@ -15,8 +15,18 @@
 
 // header("Location: view/usuario/anuncio.php");
 // header("Location: anuncio.php");
-header("Location: inicio_index.php");
+
+if (!isset($_COOKIE['user'])) {
+
+   header("Location: inicio_index.php");
+
+} else {
+   header("Location: ver_anuncios.php");
+}
+
 exit;
+
+// print_r(glob("./archivo/*", GLOB_ONLYDIR));
 
 // php:
 // /usr/bin/php7.3
@@ -29,3 +39,4 @@ exit;
 // /usr/share/php7.3-json
 // /usr/share/php7.3-opcache /opt/lampp/bin/php
 // /usr/share/man/man1/php.1.gz
+// http://localhost/Proyectos/APPCOMERCIAL/todoautopr/htdocs/index.php

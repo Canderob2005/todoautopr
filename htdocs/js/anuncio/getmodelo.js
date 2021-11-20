@@ -2,11 +2,14 @@
 		let marca = document.getElementById('marca');
 
 		marca.addEventListener("change", function(argument) {
-			console.log(this.value);
+			let categoria = document.getElementById("categoria");
 
-			$.getJSON('../server/getmodelos.php', {
+			console.log(this.value);
+			//  Parametro idcategoria
+			$.getJSON('./php/getmodelos.php', {
 				fun: 'getmodelo',
-				id: this.value
+				id: this.value,
+				idcategoria: categoria.value,
 			}, function(json, textStatus) {
 
 				console.log(textStatus);

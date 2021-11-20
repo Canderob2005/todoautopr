@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
    <head>
@@ -23,6 +29,8 @@
          background-color: rgba(255, 255, 255, 0.7);
          }
       </style>
+        <script src="./js/chat/chat.js">
+  </script>
    </head>
    <body>
       <div class="">
@@ -42,7 +50,7 @@
                   <div class="panel-body" style="padding-top:30px">
                      <div class="alert alert-danger col-sm-12" id="login-alert" style="display:none">
                      </div>
-                     <form action="./server/inicio_sesion/inicio_sesion.php" autocomplete="off" class="form-horizontal" id="loginform" method="POST" role="form">
+                     <form action="./php/inicio_sesion/inicio_sesion.php" autocomplete="off" class="form-horizontal" id="loginform" method="POST" role="form">
                         <div class="input-group" style="margin-bottom: 25px">
                            <span class="input-group-addon">
                               <i class="fas fa-user-alt">

@@ -44,6 +44,8 @@ POr esta razón el comentario pues las URL de los ficheros externos JS y CSS deb
     margin: 0px !important;
     }
     </style>
+      <script src="./js/chat/chat.js">
+  </script>
     <!-- ==================================== -->
     <link href="./css/anuncio.css" rel="stylesheet" type="text/css"/>
   </head>

@@ -1,0 +1,70 @@
+
+
+Notas de los ficheros del directorio
+
+//////////////////////////////////////////////////////////
+Nota: puede existir redundancia en el directorio {usuario/} 
+esto gracias a que se hizo una seria de modificaciones al 
+momento de organizar los directorios en el que fue el directorio 
+{vistas/} lo cual ya no existe  y se archivó en el directorio de 
+la raíz del proyecto en sí {../doc/}
+
+Gua de directorios sencilla 
+------------------------------
+./directorio/nombre_fichero/
+------------------------------
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////
+{anuncio.php}
+	Los componentes y funcionalidades de este fichero debería estar bajo un directorio 
+	con el mismo nombre bajo que su vez deberá estar dentro de un directorio padre que 
+	indique el enfoque de los scriprt que esta  dentro como por ejemplo: 
+
+	./server/anuncio/
+	./js/anuncio/
+	./css/anuncio/
+	./comp/anuncio/
+//////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////////////////
+{buscador.php}
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////
+
+
+
+{detalles_anuncio.php}
+
+
+{elimina_cooke.php}
+
+
+{index.php}
+
+
+{inicio_index.php}
+
+
+{inicio_recupera.php}
+
+
+{inicio_registro.php}
+
+
+{tabla.php}
+
+
+{usuario.php}
+
+
+{ver_anuncios.php}
+
+
+Notas sobre el directorio {usuarios/}
+	Este directorio contiene instrucciones que ahora se encuentran en el directorio raíz {htdocs/} por lo que no se deben eliminar de forma apresurada, ya que pueden contener instrucciones importantes que no queríamos volver crear su algoritmo de ejecución.

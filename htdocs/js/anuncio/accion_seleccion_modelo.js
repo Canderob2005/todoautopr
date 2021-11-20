@@ -4,13 +4,15 @@
 				".contenedor_marcas_modelos .select_marca"
 			);
 		select_marca.addEventListener("change", function(argument) {
+			let categoria = document.getElementById("categoria");
 			console.log(select_marca.value);
 			let id = this.value;
 			// console.log(id);
 
 			$.getJSON('./php/getmodelos.php', {
 				fun: 'getmodelo',
-				id: id,
+				id: this.value,
+				idcategoria: categoria.value,
 			}, function(json, textStatus) {
 
 			}).always(function(json, textStatus) {

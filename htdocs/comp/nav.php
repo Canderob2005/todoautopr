@@ -25,47 +25,50 @@ color: #ffffff;
     <a class="w3-bar-item w3-button" href="#">
       Prototipo de aplicación
     </a>
-    <a class="w3-bar-item w3-button w3-hide-small" href="anuncio.php">
+        <a class="w3-bar-item w3-button w3-hide-small" href="./anuncio.php">
       Anuncio
     </a>
-    <a class="w3-bar-item w3-button w3-hide-small" href="tabla.php">
+    <a class="w3-bar-item w3-button w3-hide-small" href="./tabla.php">
       Tabla
     </a>
-    <a class="w3-bar-item w3-button w3-hide-small" href="buscador.php">
+    <a class="w3-bar-item w3-button w3-hide-small" href="./buscador.php">
       Buscador
     </a>
-    <a class="w3-bar-item w3-button w3-hide-small" href="ver_anuncios.php">
+    <a class="w3-bar-item w3-button w3-hide-small" href="./ver_anuncios.php">
       Ver Anuncios
     </a>
-    <a class="w3-bar-item w3-button w3-hide-small" href="admin/index.php">
+    <a class="w3-bar-item w3-button w3-hide-small" href="./admin/admin.php">
       Tablero del administrador
     </a>
-    <a class="w3-bar-item w3-button w3-hide-small" href="inicio/server/eviar_correo.php">
+    <a class="w3-bar-item w3-button w3-hide-small" href="./inicio/php/eviar_correo.php">
       Evia correo
     </a>
-    <a class="w3-bar-item w3-button w3-right w3-red" href="./elimina_cooke.php">
-      Salir
+     <a class="w3-bar-item w3-button w3-hide-small" href="./buscador/buscador.php">
+      Buscador
     </a>
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" href="javascript:void(0)" onclick="myFunction()">
       ☰
+    </a>
+    <a class="w3-bar-item w3-button w3-right" href="./elimina_cooke.php" style="color:red; font-weight: bold;">
+      Salir
     </a>
   </div>
   <div class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" id="menu_navegacion">
     <a class="w3-bar-item w3-button" href="anuncio.php">
       Anuncio
     </a>
-    <a class="w3-bar-item w3-button" href="tabla.php">
+    <a class="w3-bar-item w3-button" href="./tabla.php">
       Tabla
     </a>
-    <a class="w3-bar-item w3-button" href="buscador.php">
+    <a class="w3-bar-item w3-button" href="./buscador.php">
       Buscador
     </a>
-    <a class="w3-bar-item w3-button" href="ver_anuncios.php">
+    <a class="w3-bar-item w3-button" href="./ver_anuncios.php">
       Ver Anuncios
     </a>
-    <a class="w3-bar-item w3-button" href="admin/index.php">
+    <!--     <a class="w3-bar-item w3-button" href="./admin/admin.php">
       Tablero del administrador
-    </a>
+    </a> -->
     <a class="w3-bar-item w3-button" href="#">
       xxxxxxxxxxxxxxx
     </a>

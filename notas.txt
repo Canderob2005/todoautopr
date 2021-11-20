@@ -1,4 +1,8 @@
+
+/////////////////////////////
 sudo /opt/lampp/lampp start
+/////////////////////////////
+
 
 =============================================================
 http://localhost/Proyecto/todoautopr_/htdocs/
@@ -13,15 +17,17 @@ https://github.com/codefunc+ode/todoautopr_
 http://todoautopr.epizy.com
 http://pruebas.todoautopr.com/
 ==============================================
-ns1.dns-parking.com
-ns2.dns-parking.com
 
-include $_SERVER['REQUEST_URI'] . "/configuracion/config.php";
 
-Instrucciones 
+Referencia API 
 
-php_flag display_startup_errors on
-php_flag display_errors on
+Muchas para escojer. 
+https://rapidapi.com/collection/car-api?fbclid=IwAR1I9YOmgzbWlcSeaHQhzvxFiv7LNLtzCPSljaZw5fPiAysGCQSI_qvcyxM
 
-Options -Indexes
-ErrorDocument 403 /notas.txt
+Solo una
+https://vpic.nhtsa.dot.gov/api/?fbclid=IwAR1v-y4_LTTb34692iGX6E15Cr3dwS4Bao3dsJW6lKKKdUJOLQ3DVZA_5ow
+
+
+ verificar  reutilizacion para refrezcar
+
+ /home/code/Escritorio/Proyectos/APPCOMERCIAL/todoautopr/htdocs/js/anuncio/accion_seleccion_modelo.js

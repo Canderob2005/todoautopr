@@ -1,1 +1,1 @@
-notas.txt
+Fichero  {modal_error_enviar.php} debe  analizarse antes  de ser eliminado

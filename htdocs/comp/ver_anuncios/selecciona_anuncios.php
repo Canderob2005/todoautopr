@@ -2,7 +2,7 @@
 
 function todosLosAnuncios($value = '')
 {
-   include "../conn/conn.php";
+   include "./conn/conn.php";
    try {
 
       $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -30,7 +30,7 @@ function busca_imagenes_anuncio($idanuncio, $anuncio)
    // echo "ok";0
 
    try {
-      include "../conn/conn.php";
+      include "./conn/conn.php";
       $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       $stmt = $conn->prepare("SELECT * FROM imagenes WHERE idanuncio ='$idanuncio'");
@@ -63,9 +63,9 @@ function busca_imagenes_anuncio($idanuncio, $anuncio)
   <div class="w3-container w3-center">
     <div class="w3-card-4">
       <h3 class="">
-        <?=$marca;?>
+
       </h3>
-      <img class="w3-round" src="<?=$ruta;?>"/>
+      <img class="w3-round" src="./archivo/<?=$ruta;?>"/>
       <ul class="w3-ul w3-small w3-left-align">
         <li>
           Marca:
@@ -117,7 +117,7 @@ function busca_imagenes_anuncio($idanuncio, $anuncio)
 
 function getNombreId($tabla, $idnombre, $id)
 {
-   include "../conn/conn.php";
+   include "./conn/conn.php";
    try {
       $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -125,6 +125,8 @@ function getNombreId($tabla, $idnombre, $id)
       $stmt->execute();
 
       $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+      // var_dump($resultado[0]["nombre"]);
 
       return $resultado[0]["nombre"];
 

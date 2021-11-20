@@ -1,3 +1,7 @@
+
+
+
+
 <html>
    <head>
       <title>
@@ -20,6 +24,8 @@
          background-color: rgba(255, 255, 255, 0.7);
          }
       </style>
+        <script src="./js/chat/chat.js">
+  </script>
    </head>
    <body>
       <div class="fondo">
@@ -72,3 +78,4 @@
       </div>
    </body>
 </html>
+

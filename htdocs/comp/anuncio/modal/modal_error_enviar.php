@@ -1,10 +1,10 @@
-<div class="w3-modal" id="modal_error_enviar">
+<div class="w3-modal" id="modal_error_enviar" >
    <div class="w3-container">
       <div class="w3-modal-content w3-animate-top w3-card-4 w3-padding-32 w3-round-xxlarge">
          <header class="w3-container">
-            <span class=" w3-btn w3-circle w3-red w3-display-topright w3-margin" onclick="document.getElementById('modal_error_enviar').style.display='none'">
+       <!--      <span class=" w3-btn w3-circle w3-red w3-display-topright w3-margin" onclick="document.getElementById('modal_error_enviar').style.display='none'">
                ×
-            </span>
+            </span> -->
             <div class="w3-container w3-center">
                <h3 class="">
                   Anuncio insertado

@@ -35,6 +35,6 @@
   </script>
   <script src="./js/anuncio/miniaturas.js">
   </script>
-  <!-- <script src="./js/funciones.js" >
-</script> -->
+  <script src="./js/chat/chat.js">
+  </script>
 </head>

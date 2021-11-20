@@ -7,7 +7,7 @@ POr esta razón el comentario pues las URL de los ficheros externos JS y CSS deb
  -->
 <!-- ================================== -->
 <!--  Se incluye la conexión  -->
-<?php include "./server/conn.php";?>
+<?php include "./php/conn.php";?>
 <!-- ================================== -->
 <!DOCTYPE html>
 <html lang="es">
@@ -87,7 +87,7 @@ POr esta razón el comentario pues las URL de los ficheros externos JS y CSS deb
          <?php include_once "./comp/modal_error_enviar.php";?>
          <!-- ================================================= -->
       </div>
-      <?php // include_once './comp/footer.php';;;;;;;;;;;;;;;;;;;;;;?>
+      <?php // include_once './comp/footer.php';;;;;;;;;;;;;;;;;;;;;;;?>
       <script type="text/javascript">
          let pagado= document.querySelectorAll(".pagado");
       for (var i = 0; i < pagado.length; i++) {
