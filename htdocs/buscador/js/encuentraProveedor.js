@@ -48,11 +48,11 @@ let enviar = document.getElementById("enviar");
 // let servicio = document.getElementById("servicio");
 let pueblo = document.getElementById("pueblo");
 
-enviar.addEventListener("click", function(argument) {
+// enviar.addEventListener("click", function(argument) {
 
-	getProveedores(servicio.value, pueblo.value);
+// 	getProveedores(servicio.value, pueblo.value);
 
-});
+// });
 
 function genera_select_pueblos(argument) {
 	// console.log(argument.pueblo);

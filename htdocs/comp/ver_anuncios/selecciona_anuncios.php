@@ -126,6 +126,8 @@ function getNombreId($tabla, $idnombre, $id)
 
       $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+
+
       // var_dump($resultado[0]["nombre"]);
 
       return $resultado[0]["nombre"];
