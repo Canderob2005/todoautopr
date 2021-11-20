@@ -6,6 +6,6 @@
 // $dbname     = "app_clasificadospr";
 
 $servername = "localhost";
-$username   = "u317430902_caleman9791";
-$password   = "Caleman9791";
-$dbname     = "u317430902_001";
+$username   = "u317430902_canderob";
+$password   = "camara";
+$dbname     = "u317430902_todoAuto";
