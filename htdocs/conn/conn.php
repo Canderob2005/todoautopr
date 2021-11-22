@@ -5,9 +5,9 @@
 // //////////////////////////////////////
 //  Conexión servidor local
 $servername = "localhost";
-$username   = "root";
-$password   = "";
-$dbname     = "app_auto_001";
+$username   = "u317430902_canderob";
+$password   = "camara";
+$dbname     = "u317430902_todoAuto";
 // $dbname     = "todoautopr_1";
 // //////////////////////////////////////
 // -------------------------------------
